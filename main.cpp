@@ -7,7 +7,7 @@ int main()
   std::cin >> m >> n;
   if (!(std::cin >> m >> n))
   {
-    std::cerr << "Invalid matrix dimensions\n";
+    std::cerr << "Invalid matrix\n";
     return 1;
   }
   try

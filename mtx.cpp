@@ -1,4 +1,6 @@
 #include "titleMtx.h"
+#include <iostream>
+#include <stdexcept>
 
 void allocateMemory(size_t m, size_t n)
 {
@@ -9,9 +11,9 @@ void allocateMemory(size_t m, size_t n)
   }
 }
 
-void deallocateMemory()
+void deallocateMemory(int ** data, size_t m)
 {
-  for (size_t i = 0; i < rows; ++i)
+  for (size_t i = 0; i < m; ++i)
   {
     delete[] data[i];
   }
@@ -25,7 +27,7 @@ Matrix(size_t m, size_t n) : rows(m), cols(n)
 
 ~Matrix()
 {
-  deallocateMemory();
+  deallocateMemory(int ** data, size_t m);
 }
 
 Matrix(const Matrix& other) : rows(other.rows), cols(other.cols)
@@ -75,7 +77,7 @@ void resize(size_t newRows, size_t newCols)
       newData[i][j] = data[i][j];
     }
   }
-  deallocateMemory();
+  deallocateMemory(int ** data, size_t m);
   data = newData;
   rows = newRows;
   cols = newCols;

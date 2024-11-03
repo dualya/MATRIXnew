@@ -8,7 +8,7 @@ class Matrix {
     size_t cols;
     int** data;
     void allocateMemory(size_t m, size_t n);
-    void deallocateMemory();
+    void deallocateMemory(int ** data, size_t m);
   public:
     Matrix(size_t m, size_t n);
     ~Matrix();
