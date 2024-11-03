@@ -4,9 +4,9 @@
 
 class Matrix {
   private:
-    size_t rows_;
-    size_t cols_;
-    int** data_;
+    size_t rows;
+    size_t cols;
+    int** data;
     void allocateMemory(size_t m, size_t n);
     void deallocateMemory();
   public:
